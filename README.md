@@ -11,7 +11,9 @@ This project is designed to demonstrate clean architecture (MVC), database integ
 ✅ Fully dynamic content management via Admin Panel  
 ✅ Public-facing responsive UI 
 ✅ Admin dashboard with secure login and CRUD operations
+
 ✅ MSSQL Database with EF Core & Code First approach  
+
 ✅ Modular architecture with MVC Pattern  
 ✅ ViewComponent & Layout integrations  
 ✅ Clean and modern UI with HTML, CSS, Bootstrap  
