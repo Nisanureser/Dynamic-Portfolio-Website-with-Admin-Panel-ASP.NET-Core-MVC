@@ -1,0 +1,39 @@
+﻿@model SocialMedia
+
+@{
+    ViewData["Title"] = "Sosyal Medya Güncelle";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <form method="post" asp-action="UpdateSocialMedia">
+            <input type="hidden" asp-for="SocialMediaId" />
+
+            <div class="form-group">
+                <label>Başlık</label>
+                <input type="text" asp-for="Title" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label>URL</label>
+                <input type="text" asp-for="Url" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label>İkon Seçimi</label>
+                <select asp-for="Icon" name="Icon" class="form-control" required>
+                    <option value="im im-facebook" selected="@Model.Icon == " im im-facebook"">🔵 Facebook</option>
+                    <option value="im im-twitter" selected="@Model.Icon == " im im-twitter"">🐦 Twitter</option>
+                    <option value="im im-instagram" selected="@Model.Icon == " im im-instagram"">📸 Instagram</option>
+                    <option value="im im-linkedin" selected="@Model.Icon == " im im-linkedin"">💼 LinkedIn</option>
+                    <option value="im im-github" selected="@Model.Icon == " im im-github"">🐙 GitHub</option>
+                    <option value="im im-behance" selected="@Model.Icon == " im im-behance"">🎨 Behance</option>
+                    <option value="im im-pinterest" selected="@Model.Icon == " im im-pinterest"">📌 Pinterest</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success">Güncelle</button>
+        </form>
+    </div>
+</div>

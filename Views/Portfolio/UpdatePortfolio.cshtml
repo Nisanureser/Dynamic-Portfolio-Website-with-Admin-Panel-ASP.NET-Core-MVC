@@ -1,0 +1,50 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "Portföy Güncelle";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Portföy Güncelle</div>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="UpdatePortfolio" method="post" enctype="multipart/form-data">
+                            <input type="hidden" asp-for="PortfolioId" />
+                            <div class="form-group">
+                                <label asp-for="Title">Proje İsmi</label>
+                                <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" required />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="SubTitle">Alt Başlık</label>
+                                <input type="text" class="form-control" id="SubTitle" name="SubTitle" value="@Model.SubTitle" required />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Url">Url</label>
+                                <input type="text" class="form-control" id="Url" name="Url" value="@Model.Url" required />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description">Açıklama</label>
+                                <textarea class="form-control" id="Description" name="Description" rows="3" required>@Model.Description</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ImageFile">Resim Yükle</label>
+                                <input type="file" class="form-control-file" id="ImageFile" name="ImageFile" />
+                                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                                {
+                                    <p>Mevcut Resim: <img src="@Model.ImageUrl?@DateTime.Now.Ticks" alt="Current Image" style="max-width: 100px; max-height: 100px;" />
+</p>
+                                }
+                            </div>
+                            <button type="submit" class="btn btn-success">Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

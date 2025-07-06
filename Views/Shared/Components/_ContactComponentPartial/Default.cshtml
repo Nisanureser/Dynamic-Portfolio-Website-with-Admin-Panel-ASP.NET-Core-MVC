@@ -1,0 +1,41 @@
+﻿@model List<MyPortfolioUdemy.DAL.Entities.Contact>
+
+<section style="font-family: 'Segoe UI', sans-serif; background-color: #ffffff; padding: 40px 20px;">
+
+    <h2 style="text-align: center; font-size: 24px; margin-bottom: 10px;">Contact Us</h2>
+    <p style="text-align: center; font-size: 14px; color: #555; margin-bottom: 30px;">
+        Have a question? Send us a message.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 900px; margin: auto;">
+
+        
+        <form method="post" asp-controller="Message" asp-action="SendMessage" style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 10px;">
+            <input type="email" name="Email" placeholder="Email" required
+                   style="padding: 10px 12px; border-radius: 16px; border: 1px solid #ccc; font-size: 13px;">
+            <input type="text" name="NameSurname" placeholder="Name Surname" required
+                   style="padding: 10px 12px; border-radius: 16px; border: 1px solid #ccc; font-size: 13px;">
+            <input type="text" name="Subject" placeholder="Subject" required
+                   style="padding: 10px 12px; border-radius: 16px; border: 1px solid #ccc; font-size: 13px;">
+            <input type="text" name="MessageDetail" placeholder="Your message..." required
+                       style="padding: 10px 12px; border-radius: 16px; border: 1px solid #ccc; font-size: 13px; height: 60px;">
+           
+            <button type="submit"
+                    style="padding: 10px 0; background-color: #af2b2b; color: white; border: none; border-radius: 16px; font-size: 14px; cursor: pointer;">
+                Submit
+            </button>
+        </form>
+
+   
+        <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 16px;">
+            @foreach (var item in Model)
+            {
+                <div style="background-color: #f9f9f9; padding: 15px; border-radius: 12px;">
+                    <h4 style="margin: 0 0 5px 0; font-size: 15px; color: #af2b2b;">@item.Değer</h4>
+                    <p style="margin: 0; font-size: 13px; color: #666;">@item.Alan</p>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>

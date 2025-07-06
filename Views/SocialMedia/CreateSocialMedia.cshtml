@@ -1,0 +1,37 @@
+﻿@model SocialMedia
+
+@{
+    ViewData["Title"] = "Yeni Sosyal Medya Ekle";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <form method="post" asp-action="CreateSocialMedia">
+            <div class="form-group">
+                <label>Başlık</label>
+                <input type="text" name="Title" class="form-control" asp-for="Title" required />
+            </div>
+            <div class="form-group">
+                <label>URL</label>
+                <input type="text" name="Url" class="form-control" asp-for="Url" required />
+            </div>
+            <div class="form-group">
+                <label>İkon Seçimi</label>
+                <select name="Icon" class="form-control" asp-for="Icon" required> 
+                      <option value="" disabled selected>İkon Seç</option>
+                      <option value="im im-facebook">Facebook</option> 
+                      <option value="im im-twitter">Twitter</option> 
+                      <option value="im im-instagram">Instagram</option> 
+                      <option value="im im-linkedin">LinkedIn</option> 
+                      <option value="im im-github">GitHub</option> 
+                      <option value="im im-behance">Behance</option> 
+                      <option value="im im-pinterest">Pinterest</option> 
+               </select> 
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+</div>

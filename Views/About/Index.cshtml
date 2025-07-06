@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Hakkımda</div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-head-bg-primary mt-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Başlık</th>
+                                    <th scope="col">Açıklama</th>
+                                    <th scope="col">Hakkımda</th>
+                                    <th scope="col">Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@ViewBag.aboutTitle</td>
+                                    <td>@ViewBag.aboutSubdescription</td>
+                                    <td>@ViewBag.aboutDetail</td>
+                                    <td>
+                                        <a href="/About/UpdateAbout/@ViewBag.aboutId" class="btn btn-success">Güncelle</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

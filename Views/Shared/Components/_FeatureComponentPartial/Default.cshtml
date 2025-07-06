@@ -1,0 +1,80 @@
+﻿<section id="home" class="target-section" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, #141e30, #243b55); color: #fff; padding: 60px 20px; font-family: 'Segoe UI', sans-serif; position: relative; overflow: hidden;">
+
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('clouds.png') no-repeat center center/cover; animation: cloud-move 60s linear infinite;"></div>
+
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.2); pointer-events: none;"></div>
+
+    <!-- Yıldızlar arka planı -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('stars.png') repeat; pointer-events: none;"></div>
+
+    <div style="max-width: 1000px; text-align: center; position: relative; z-index: 1;">
+   
+        <h1 style="font-size: 5rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: 1px; color: #f1f1f1; font-family: 'Poppins', sans-serif;">
+                @ViewBag.featureTitle
+            </h1>
+
+            <p style="font-size: 1.6rem; max-width: 800px; margin: 0 auto 40px auto; color: #d1d1d1; line-height: 1.8; font-weight: 300;">
+                @ViewBag.featureDescription
+            </p>
+        
+
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+            <a href="#works" style="padding: 18px 40px; background-color: #af2b2b; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; font-size: 1.5rem;">🚀 Projelerim</a>
+
+            <a href="#about" style="padding: 18px 40px; border: 2px solid #fff; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; font-size: 1.5rem;">👩‍💻 Hakkımda</a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div style="margin-top: 60px;">
+            <a href="#about" class="scroll-indicator" style="color: #ccc; text-decoration: none; font-size: 1.2rem; display: inline-flex; flex-direction: column; align-items: center; animation: bounce 2s infinite;">
+                <span style="margin-bottom: 5px;">Aşağı Kaydır</span>
+                <i class="im im-arrow-down" style="font-size: 2rem;"></i>
+            </a>
+        </div>
+    </div>
+    @model List<SocialMedia>
+
+    <!-- Sosyal medya ikonları, sağ orta kısımda ve boyutu büyük -->
+    <ul style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; 
+        gap:30px; list-style: none; padding: 0; margin: 0;">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@item.Url" style="color: #fff; font-size: 2rem;" target="_blank">
+                    <i class="@item.Icon"></i>
+                </a>
+            </li>
+        }
+    </ul>
+
+
+    <!-- Animasyon için stil -->
+    <style>
+        @@keyframes bounce {
+            0%, 100%
+
+        {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-8px);
+        }
+
+        }
+
+        @@keyframes cloud-move {
+            0%
+
+        {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+
+        }
+    </style>
+
+</section>

@@ -1,0 +1,23 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+
+## Build results
+bin/
+obj/
+build/
+[Bb]uild/
+[Ll]ogs/
+*.log
+
+## OS Files
+.DS_Store
+Thumbs.db
+
+## Configuration
+appsettings.*.json
+
+## Others
+*.db
+*.sqlite

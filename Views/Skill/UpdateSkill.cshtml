@@ -1,0 +1,53 @@
+﻿@model Skill
+@{
+    ViewData["Title"] = "UpdateSkill";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Yetenekler</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title"> Yetenek Güncelleme Formu</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-action="UpdateSkill">
+
+                            <input type="hidden" asp-for="SkillId" />
+                            <label>Yetenek</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+
+                            <br />
+
+                            <label>Yetenek Değeri (Yüzde)</label>
+
+                            <div class="d-flex align-items-center">
+                                <input type="range" asp-for="Value" min="0" max="100" step="1" class="form-control-range" id="valueSlider" onchange="updateSliderValue()">
+                                <span id="sliderValue" class="ml-5" style="font-weight: bold;"></span>%
+                            </div>
+                            <br />
+
+                            <button class="btn btn-primary">Yetenek'i Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateSliderValue() {
+        var slider = document.getElementById("valueSlider");
+        var value = slider.value;
+        document.getElementById("sliderValue").innerText = value;
+    }
+
+    // Sayfa yüklendiğinde ilk değeri göster
+    window.onload = function () {
+        updateSliderValue();
+    };
+</script>

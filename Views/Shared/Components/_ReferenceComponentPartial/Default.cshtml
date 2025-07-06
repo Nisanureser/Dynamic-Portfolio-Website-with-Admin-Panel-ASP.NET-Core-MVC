@@ -1,0 +1,25 @@
+﻿@model List<MyPortfolioUdemy.DAL.Entities.Reference>
+
+    <div class="s-references" style="background-color: #f9f9f9; padding: 6rem 0; text-align: center;">
+
+        <div class="row references-header">
+            <div class="col-full">
+                <h1 class="h02" style="font-size: 3rem; margin-bottom: 3rem; color: #222;">Referanslarım</h1>
+            </div>
+        </div>
+
+        <div class="row references" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+            @foreach (var item in Model)
+        {
+            <div class="col-block reference" style="background-color: white; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); padding: 2rem; max-width: 300px; transition: transform 0.3s;">
+                <div class="reference__content">
+                    <img src="@item.ImageUrl" alt="Referee image" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: #111; margin-bottom: 0.5rem;">@item.NameSurname</h3>
+                    <p style="font-size: 1rem; color: #888; margin-bottom: 0.5rem;">@item.Subject</p>
+                    <p style="font-size: 0.9rem; color: #555; word-break: break-word;">@item.Email</p>
+                </div>
+            </div>
+        }
+        </div>
+
+    </div>

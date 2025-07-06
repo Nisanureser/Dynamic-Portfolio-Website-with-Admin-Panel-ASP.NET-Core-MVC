@@ -1,0 +1,39 @@
+﻿@using MyPortfolioUdemy.Models
+@model List<SocialMedia>
+
+<footer>
+    <div class="row">
+        <div class="col-full">
+            <div class="footer-logo">
+                  <a class="footer-site-logo" href="#0"><img src="~/images/logo.png" alt="Homepage"></a> 
+            </div>
+
+            <ul class="footer-social">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="@item.Url" target="_blank">
+                            <i class="@item.Icon" aria-hidden="true"></i>
+                            <span>@item.Title</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="row footer-bottom">
+        <div class="col-twelve">
+            <div class="copyright">
+                <span>© Copyright MyPortfolyo @DateTime.Now.Year</span>
+                <span>Design by <a href="https://www.styleshout.com/">Asp.Net Core</a></span>
+            </div>
+
+            <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <i class="im im-arrow-up" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,51 @@
+﻿@model Reference
+@{
+    ViewData["Title"] = "CreateReference";
+    Layout = "~/Views/Layout/Index.cshtml";
+    
+}
+
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Yapılacaklar</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Yeni Referans İşlem Ekleme Listesi</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-action="CreateReference">
+
+                            <label>Görsel Yolu</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+
+                            <br />
+                            <label>İsim Soyisim</label>
+                            <input type="text" asp-for="NameSurname" class="form-control" />
+
+                            <br />
+
+                            <label>Unvan</label>
+                            <input type="text" asp-for="Subject" class="form-control" />
+
+                            <br />
+
+                            <label>Email</label>
+                            <input type="text" asp-for="Email" class="form-control" />
+
+                            <br />
+
+
+
+
+                            <button class="btn btn-primary">Referansı Ekle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
