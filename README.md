@@ -21,6 +21,11 @@ This project is designed to demonstrate clean architecture (MVC), database integ
 ---
 
 ## 📷 Preview
+![image](https://github.com/user-attachments/assets/5d447d4d-c666-460f-986d-fffefeb37b26) 
+![image](https://github.com/user-attachments/assets/29fbcd64-ec3d-4185-9796-d7bb7cf5b3fc) 
+![image](https://github.com/user-attachments/assets/099545a6-2dda-405f-81d3-b1b788ac9bfb)
+
+
 
 
 
