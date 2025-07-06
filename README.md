@@ -22,7 +22,7 @@ This project is designed to demonstrate clean architecture (MVC), database integ
 
 ## 📷 Preview
 
->
+
 
 ---
 
@@ -37,7 +37,8 @@ This project is designed to demonstrate clean architecture (MVC), database integ
 - ViewComponent, Layouts  
 - Code First Migrations  
 - Model - View - Controller Architecture
+- Razor Views & ViewComponents 
+- C# (.NET 6+) Backend logic and controllers       
 
 ---
-
 
