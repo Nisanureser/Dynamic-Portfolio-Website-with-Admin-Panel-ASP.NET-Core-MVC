@@ -3040,14 +3040,11 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 
 .s-contact {
-    background-color: #151515;
-    background-image: url("../images/contact-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center, center;
+   
     padding-top: 13.2rem;
     padding-bottom: 12rem;
     color: rgba(255, 255, 255, 0.5);
-    position: relative;
+    
 }
 
 .s-contact .overlay {
@@ -4137,3 +4134,41 @@ article.blog-single .blog-content {
         display: none;
     }
 }
+
+
+
+/* inputlara daha yumuþak, modern bir görünüm */
+.input-rounded {
+    border-radius: 16px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    background-color: #fff;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+    .input-rounded:focus {
+        border-color: #af2b2b;
+        outline: none;
+    }
+
+/* sað taraftaki bilgi kutusu */
+.contact__info-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+    .contact__info-box h4 {
+        margin-bottom: 5px;
+        color: #af2b2b;
+        font-size: 15px;
+    }
+
+    .contact__info-box p {
+        margin: 0;
+        color: #666;
+        font-size: 13px;
+    }

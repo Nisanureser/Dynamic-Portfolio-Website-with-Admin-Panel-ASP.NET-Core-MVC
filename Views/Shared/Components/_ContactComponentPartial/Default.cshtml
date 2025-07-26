@@ -1,11 +1,21 @@
-﻿@model List<MyPortfolioUdemy.DAL.Entities.Contact>
+﻿@* ANASAYFA İLETİŞİM KISMI  *@
 
-<section style="font-family: 'Segoe UI', sans-serif; background-color: #ffffff; padding: 40px 20px;">
+@model List<MyPortfolioUdemy.DAL.Entities.Contact>
 
-    <h2 style="text-align: center; font-size: 24px; margin-bottom: 10px;">Contact Us</h2>
-    <p style="text-align: center; font-size: 14px; color: #555; margin-bottom: 30px;">
-        Have a question? Send us a message.
-    </p>
+<section id="contact" style=" padding-top: 13.2rem; padding-bottom: 12rem; background-color:white">
+
+    <div class="overlay"></div>
+    <div class="row narrow section-intro">
+        <div class="col-full">
+            <h3>Bize ulaşın</h3>
+            <h1 style="color:black" >Say Hello.</h1>
+            <p >
+                Sorularınız veya projeleriniz için bize ulaşmaktan çekinmeyin.
+            </p>
+        </div>
+    </div>
+
+  
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 900px; margin: auto;">
 
@@ -26,7 +36,7 @@
             </button>
         </form>
 
-   
+    
         <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 16px;">
             @foreach (var item in Model)
             {
@@ -39,3 +49,5 @@
 
     </div>
 </section>
+
+

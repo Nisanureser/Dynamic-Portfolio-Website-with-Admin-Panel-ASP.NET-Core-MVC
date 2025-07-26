@@ -1,0 +1,58 @@
+﻿@model List<Login>
+@{
+	ViewData["Title"] = "AdminList";
+	Layout = "~/Views/Layout/Index.cshtml";
+	int count = 0;
+}
+
+
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">ADMİNLER</div>
+					</div>
+					<div class="card-body">
+						<table class="table table-head-bg-primary mt-4">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Kullanıcı Adı</th>
+									<th scope="col">Şifre</th>
+									<th scope="col">Sil</th>
+									<th scope="col">Güncelle</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								@foreach (var item in Model)
+								{
+									count++;
+									<tr>
+										<td>@count</td>
+										<td>@item.Username</td>
+										<td>@item.Password</td>				
+										<td><a href="/Login/DeleteAdmin/@item.Id" class="btn btn-danger">Sil</a></td>
+										<td><a href="/Login/UpdateAdmin/@item.Id" class="btn btn-success">Güncelle</a></td>
+									</tr>
+								}
+
+							</tbody>
+						</table>
+						<a href="/Login/CreateAdmin/" class="btn btn-primary">Yeni Admin </a>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+

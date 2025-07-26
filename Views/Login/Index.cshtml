@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+
+@await Component.InvokeAsync("_HeadComponentPartial")
+
+<body id="top">
+
+    <section id="login" style="padding-top: 13.2rem; padding-bottom: 12rem; background-color:white">
+
+        <div class="overlay"></div>
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>Admin Girişi</h3>
+                <h1 style="color:black">Lütfen Giriş Yapın</h1>
+                <p class="lead">
+                    Sadece yetkili kullanıcılar admin paneline erişebilir.
+                </p>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <form method="post" asp-controller="Login" asp-action="LoginControl"
+                  style="flex: 1 1 400px; max-width: 450px; display: flex; flex-direction: column; gap: 12px;">
+
+                <input type="text" name="username" placeholder="Kullanıcı Adı" required
+                       style="padding: 10px 12px; border-radius: 16px; border: 1px solid #ccc; font-size: 14px;">
+
+                <input type="password" name="password" placeholder="Şifre" required
+                       style="padding: 10px 12px; border-radius: 16px; border: 1px solid #ccc; font-size: 14px;">
+
+                <button type="submit"
+                        style="padding: 10px 0; background-color: #af2b2b; color: white; border: none; border-radius: 16px; font-size: 14px; cursor: pointer;">
+                    Giriş Yap
+                </button>
+
+                @if (ViewBag.Error != null)
+                {
+                    <p style="color:red; font-size: 14px;">@ViewBag.Error</p>
+                }
+            </form>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>
